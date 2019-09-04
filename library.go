@@ -12,8 +12,8 @@ type bookrepo struct {
 	server *url.URL
 }
 
-func (r *bookrepo) getBookName(isbn string) (string, error) {
-	// https://openlibrary.org/api/books?bibkeys=ISBN:9780134190440&format=json
+func (r *bookrepo) GetBookName(isbn string) (string, error) {
+	// https://openlibrary.org/api/books?bibkeys=ISBN:9780134190440&format=json&jscmd=data
 
 	bookUrl := *r.server
 	bookUrl.Path = path.Join(r.server.Path, "/api/books")

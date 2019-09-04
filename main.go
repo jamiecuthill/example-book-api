@@ -56,7 +56,7 @@ func handleBookReq(repo *bookrepo) http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		isbn := mux.Vars(r)["isbn"]
 
-		name, err := repo.getBookName(isbn)
+		name, err := repo.GetBookName(isbn)
 		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			fmt.Fprintf(w, "Error: %+v\n", err)
