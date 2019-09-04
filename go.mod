@@ -1,4 +1,4 @@
-module github.com/jamiecuthill/http
+module github.com/jamiecuthill/example-book-api
 
 go 1.12
 
